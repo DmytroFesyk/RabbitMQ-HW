@@ -1,0 +1,17 @@
+server:
+   port: 8090
+spring:
+    rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
+    data:
+      mongodb:
+        uri: mongodb://localhost:27017/rabbitmq-dead-letter
+app:
+  producer:
+    url: http://localhost:8081
+
+
+

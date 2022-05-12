@@ -1,0 +1,19 @@
+server:
+   port: 8080
+spring:
+    rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
+app:
+  rabbitmq:
+    main-queue:
+      ttl: 15000
+      max-length: 5
+    retry-queue:
+      ttl: 5000
+      max-attempts: 3
+
+
+

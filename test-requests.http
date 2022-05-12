@@ -1,0 +1,27 @@
+POST http://127.0.0.1:8081/messages
+Content-Type: application/json
+
+{
+  "user": "DF",
+  "message": "Hi"
+}
+
+###
+
+GET http://127.0.0.1:8090/messages?routingKey=main.failed
+
+###
+
+GET http://127.0.0.1:8090/messages?routingKey=main.dlx
+
+###
+
+
+// put list of id to request body
+POST http://127.0.0.1:8090/messages/retry
+Content-Type: application/json
+
+[
+  "ae0e33e5-05f8-4793-b527-0f045f9ab930",
+  "821e2468-09a0-42d2-9c3d-0a0b3bd74ba7"
+]
